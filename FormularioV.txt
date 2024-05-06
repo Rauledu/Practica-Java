@@ -1,0 +1,42 @@
+//Practica 29
+import javax.swing.*;
+import java.awt.event-*;
+
+public class FormularioV extends JFrame implements ActionListener
+{
+	private JTextField textF1;
+	private JLabel Label;
+	private JButtton Btn;
+	public FormularioV ()
+	{
+		setLayout(null);
+		label = new Jlabel("Usuario:");
+		label.setBounds(10,10,100,30);
+		add(label);
+		
+		textF1 = new JTextField();
+		textF1.setBounds(120,17,150,20);
+		add(textF1);
+		
+		Btn = new JButton("Aceptar");
+		Btn.setBounds(10,80,100,30);
+		add(Btn);
+		Btn.addActionListener(this);
+	}	
+		public void actionPerformed(ActionEvent e);
+		{
+			if(e.getSource() == Btn)
+			{
+				String text = textF1.getText();
+				setTitle(text);
+			}
+		}
+		public static void main (Sring args[])
+		{
+		 FormularioV formulario1 = new Formulario();
+			formulario1.setBounds(0,0,300,150);
+			formulario1.setVisible(true);
+			formulario1.setResizable(false);
+			formulario1.setLocationRelativeTo(null);
+		}	
+}

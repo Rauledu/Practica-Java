@@ -1,0 +1,10 @@
+public Class PracticeII 
+{
+	public static void main (string args[])
+	{
+		System.out.println("Esto es un Repaso de la Practica I en cuanto a los errores.")
+	}
+}
+
+//Nota: para esta practia solo debemos tomar en cuenta los detalles al momento de 
+//escribir codigo ya que si nos falta algun () o {} va a arrojar error de sintaxis.

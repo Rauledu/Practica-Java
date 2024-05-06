@@ -1,0 +1,31 @@
+//Practica 31
+//JScrollPane permite la combinacion con el textarea.
+import javax.swing.*;
+
+public class FormVII
+{
+	private JTextField TexField1;
+	private JTextArea Jarea;
+	private JScrollPane Scrollpane1;
+	
+	public FormVII()
+	{
+		setLayout(null);
+		TextField1 = new JTextField;
+		TexField1.setBounds(10,10,200,30);
+		add(TexField1);
+		
+		Jarea = new JTextArea();
+		ScrollPane1 = new JScrollPane(Jarea); //Nuevo
+		ScrollPane1.setBounds(10,50,400,300);
+		add(ScrollPane1);
+	}
+	
+	public static void main (String args [])
+	{
+		FormVII formulario1 = new FormVII();
+		formulario1.setVisible (true);
+		formulario1.setResizable(false);
+		formulario1.setLocationRelativeTo(null);
+	}
+}

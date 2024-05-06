@@ -1,0 +1,41 @@
+//Practica 34
+import javax.swing.*;
+import java.awt.event*;
+
+public FormularioNueve extends JFrame implements ItemListener //me permitira crear mi combobox.
+{
+	private JComboBox combo;
+	
+	public FormularioNueve()
+	{
+		setLayout(null);
+		combo = new JComboBox();
+		combo.setBounds(10,10,80,20);
+		add(combo);
+		
+		combo.addItem("Rojo");
+		combo.addItem("Azul");
+		combo.addItem("Negro");
+		combo.addItem("Magenta");
+		combo.addItem("Marron");
+		combo.addItem("Verde");
+		combo.addItemListener(this);// este linea es para indicar al progrma del evento que se vaa encontrar.
+	}
+	public void itemStateChange(ItemEvent e)
+	{
+		if (e.getSource() == combo)
+		{
+			String Seleccion = combo.getSelectedItem().toString();
+			setTitle(Seleccion);
+		}
+	}
+	
+	public static void main (String args[])
+	{
+			FormularioNueve formulario = new FormularioNueve();
+			formulario.setBounds(0,0,200,150);
+			formulario.setVisible(true);
+			formulario.setResizable(false);
+			formulario.setLocationRelativeTo(null);
+	}
+}

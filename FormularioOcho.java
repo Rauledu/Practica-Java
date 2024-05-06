@@ -1,0 +1,61 @@
+//Practica 33
+import javax.swing.*;
+import java.awt.event.*;
+public class FormularioOcho extends JFrame implements ActionListener
+{
+	private JLabel label1,label2, label3;
+	private JButton Btn;
+	private JTextField textfield1,textfield2;
+	
+	public FormularioOcho()
+	{
+		setLayout(null);
+		label1 = new JLabel("Valor1:");
+		label1.setBounds(50,5,100,30);
+		add(label1);
+		
+		label2 = new JLabel("Valor2:");
+		label2.setBounds(50,35,100,30);
+		add(label2);
+		
+		label3 = new JLabel ("Resultado:");
+		label3.setBounds(130,80,100,30);
+		add(label3);
+		
+		textfield1 = new JTextField();
+		textfield1.setBounds(120,10,150,20);
+		add(textfield1);
+	
+		textfield2 = new JTextField();
+		textfield2.setBounds(120,40,150,20);
+		add (textfield2);
+		
+		Btn = new JButton("Sumar");
+		Btn.setBounds(10,80,100,30);
+		add(Btn);
+		Btn.addActionListener(this);	
+	}
+	public void actionPerformed(ActionEvent e)
+	{
+		if (e.getSource() == Btn)
+		{
+			int valor1 = 0,valor2 = 0, resultado = 0;
+			
+			valor1 = Integer.parseInt(textfield1.getText());
+			valor2 = Integer.parseInt(textfield2.getText());
+			
+			resultado = valor1 + valor2;
+			
+			label3.setText("Resultado:  " + resultado);
+		}
+	}	
+	
+	public static void main (String args[])
+		{
+			FormularioOcho formulario = new FormularioOcho();
+			formulario.setBounds(0,0,300,150);
+			formulario.setVisible(true);
+			formulario.setResizable(false);
+			formulario.setLocationRelativeTo(null);
+		}
+} 

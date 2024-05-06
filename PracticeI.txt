@@ -1,0 +1,13 @@
+public class PracticeI
+{
+	public static void main(String args[]) // nos permite dar el arranque  nuestro programa.
+	{
+		System.out.println("Hola Mundo");// me permite mostrar el mensaje al momento de ejecutar el programa
+	}
+	
+}
+
+//Nota: cuando se guarda el programa con la ext java, al momento de su ejecucion
+//automaticamente crea una clase que es la contenedora del codigo humano para 
+//ser traducido al codigo maquina, cuando el sistema crea la clase no es necesario
+//escribir la ext de java otra vez, solamente se llama a la clase bajo el nombre que le distes.
