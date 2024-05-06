@@ -1,0 +1,26 @@
+//clase 18
+import java.util.Scanner;
+public class Cadenas
+{
+	public static void main (String args[])
+	{
+		String CadenaOrig="", CadenaSub= "";
+		int numCaracteres = 0, Desde = 0, Hasta =0;
+		Scanner entrada = new Scanner (System.in);
+		
+		System.out.print("Introduce una cadena de caracteres.");
+		CadenaOrig = entrada.nextLine();
+		
+		numCaracteres = CadenaOrig.lenght();
+		
+		System.out.println("La Cadena tiene "+ CadenaOrig+ "posee"+ numCaracteres+ "Caracteres. ");
+		
+		System.out.print("Desde que caracter desea obtener la nueva cadena?.");
+		Desde = nextInt();
+		System.out.print("Hasta que caracter desea obtener la nueva cadena?.");
+		Hasta = nextInt();
+		
+		CadenaSub = CadenaOrig.substring(Desde,Hasta);
+		System.out.println("La Nueva es: "+ CadenaSub);
+	}
+}
